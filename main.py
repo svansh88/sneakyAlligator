@@ -72,8 +72,8 @@ def game_loop():
     with open("D:\Python\snakeGame.py\highscore.txt", "r") as f:  
         highscore=f.read()
 
-    food_x = random.randint(10, screen_width/2)
-    food_y = random.randint(5, screen_height/2)
+    food_x = random.randint(10, int(screen_width/2))
+    food_y = random.randint(5, int(screen_height/2))
     score = 0
     
     snk_length=1
@@ -123,8 +123,8 @@ def game_loop():
 
             if abs(snake_x-food_x)<10 and abs(snake_y-food_y)<10:
                 score+=10
-                food_x = random.randint(20, screen_width/2)
-                food_y = random.randint(20, screen_height/2)
+                food_x = random.randint(20, int(screen_width/2))
+                food_y = random.randint(20, int(screen_height/2))
                 snk_length += 3    
                 if score>int(highscore):
                     highscore=score
